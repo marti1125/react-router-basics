@@ -2,6 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 import Header from './components/Header'
+import Login from './components/Login'
+import Register from './components/UserForm'
+import Details from './components/Details'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './index.css';
 //import App from './App';
 //import reportWebVitals from './reportWebVitals';
@@ -37,6 +41,10 @@ const EditProfile = (props) => {
   return <h2>Edit Profile page</h2>
 }
 
+const Dashboard = () => {
+  return <p>You're logged in. Welcome back!</p>;
+}
+
 const App = () => {
   return (
     <BrowserRouter>
@@ -47,6 +55,10 @@ const App = () => {
         <Route path="/contact" component={Contact} exact={true} />
         <Route path="/profile" component={Profile} exact={true} />
         <Route path="/profile/:id" component={EditProfile} />
+        <Route path="/login" component={Login} />
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/registration" component={Register} />
+        <Route path="/details" component={Details} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>

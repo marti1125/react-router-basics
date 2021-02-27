@@ -26,3 +26,25 @@ body {
   font-weight: bold;
   color: red;
 }
+
+.login-link {
+  height: 50vh;
+  font-size: 200%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+.error-msg {
+  color: #ff0000;
+}
